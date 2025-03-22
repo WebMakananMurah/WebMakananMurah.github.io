@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Halaman Pembayaran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Halaman Pembayaran</h1>
+        </header>
+
+        <section id="order-summary" class="order-summary">
+            <h2>Ringkasan Pesanan</h2>
+            <!-- Ringkasan Pesanan Akan Ditampilkan di Sini -->
+        </section>
+
+        <section id="payment-method" class="payment-method">
+            <h2>Pilih Metode Pembayaran</h2>
+            <form action="#" method="POST">
+                <label for="payment-method">Metode Pembayaran:</label>
+                <select id="payment-method" name="payment-method">
+                    <option value="credit-card">Kartu Kredit/Debit</option>
+                    <option value="bank-transfer">Transfer Bank</option>
+                    <option value="gopay">GoPay</option>
+                    <option value="ovo">OVO</option>
+                    <option value="qris">QRIS (Pembayaran Digital)</option> <!-- Pilihan QRIS -->
+                </select>
+                <br><br>
+
+<button type="submit" class="btn-submit">Lanjutkan Pembayaran</button>
+            </form>
+        </section>
+
+        <!-- QRIS Payment Section -->
+        <section id="dowloads/qrisspayment" class="qris-payment">
+            <h2>Atau Bayar dengan QRIS</h2>
+            <p>Pilih aplikasi dompet digital atau bank Anda dan pindai QR code di bawah ini:</p>
+            <img src="dowloads/qrisspayment" alt="QRIS" class="qris-img"> <!-- Gambar QRIS -->
+            <p>Atau klik link berikut untuk membuka QRIS di aplikasi pembayaran:</p>
+            <a href="https://img12.pixhost.to/images/1105/578768068_skyzopedia.jpg" target="_blank" class="qris-link">Klik untuk membuka QRIS di Aplikasi</a> <!-- Link untuk membuka QRIS -->
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Website Makanan | Semua Hak Cipta Dilindungi</p>
+        </footer>
+    </div>
+
+    <script>
+        // Fungsi untuk mendapatkan parameter dari URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Menampilkan detail pesanan di halaman pembayaran
+        window.onload = function() {
+            const item = getQueryParam('item');
+            const price = getQueryParam('price');
+
+            if (item && price) {
+                // Menambahkan detail pesanan ke halaman
+                document.getElementById('order-summary').innerHTML = `
+                    <h2>Ringkasan Pesanan</h2>
+                    <div class="order-item">
+                        <p>Menu: item</p>
+                        <p>Harga: RM{price}</p>
+                    </div>
+                    <div class="total">
+                        <h3>Total: RM ${price}</h3>
+                    </div>
+                `;
+            } else {
+                // Jika tidak ada data item dan harga, beri notifikasi
+                document.getElementById('order-summary').innerHTML = '<p>Pesanan tidak ditemukan.</p>';
+            }
+        };
+    </script>
+</body>
+</html>

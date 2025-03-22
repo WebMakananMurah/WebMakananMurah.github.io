@@ -1,0 +1,354 @@
+Untuk menambahkan tombol Order di website makanan, Anda bisa menambahkannya di setiap item makanan di menu Anda. Tombol ini bisa mengarah ke halaman lain atau membuka pop-up, tergantung kebutuhan Anda. Sebagai contoh, kita akan menambahkan tombol Order di bawah setiap item makanan di halaman menu.
+
+Berikut adalah langkah-langkah untuk menambahkan tombol Order ke website makanan Anda:
+
+1. HTML - Menambahkan Tombol Order
+
+Pertama, tambahkan tombol Order di dalam setiap item makanan di HTML. Misalnya, kita ingin menambahkan tombol Order Now di bawah deskripsi makanan.
+
+Contoh HTML untuk Menu Makanan dengan Tombol Order:
+
+```html
+<section id="menu">
+    <h2>Menu Makanan</h2>
+
+    <div class="menu-item">
+        <img src="https://via.placeholder.com/200" alt="Nasi Goreng" class="food-img">
+        <div class="food-details">
+            <h3>Nasi Goreng</h3>
+            <p>Harga: Rp 25.000</p>
+            <p>Deskripsi: Nasi goreng dengan bumbu spesial dan telur ceplok di atasnya.</p>
+            <!-- Tombol Order -->
+            <button class="order-btn" onclick="orderNow('Nasi Goreng')">Order Now</button>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="https://via.placeholder.com/200" alt="Ayam Bakar" class="food-img">
+
+
+
+
+
+
+<p>Deskripsi: Nasi goreng dengan bumbu spesial dan telur ceplok di atasnya.</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/200" alt="Ayam Bakar" class="food-img">
+                <div class="food-details">
+                    <h3>Ayam Bakar</h3>
+                    <p>Harga: Rp 30.000</p>
+                    <p>Deskripsi: Ayam bakar dengan sambal khas dan nasi putih.</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/200" alt="Mi Goreng" class="food-img">
+                <div class="food-details">
+                    <h3>Mi Goreng</h3>
+                    <p>Harga: Rp 20.000</p>
+                    <p>Deskripsi: Mi goreng dengan sayuran segar dan bumbu pedas.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Website Makanan | Semua Hak Cipta Dilindungi</p>
+    </footer>
+
+</body>
+</html>
+```
+
+4. Hasil Akhir
+Dengan menambahkan kode HTML dan CSS ini, menu makanan akan ditampilkan dengan gambar, nama, harga, dan deskripsi. Desain responsif akan memastikan tampilan tetap baik pada perangkat mobile dan desktop.
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Gaya untuk Tombol Order */
+.order-btn {
+    background-color: #28a745; /* Warna hijau untuk tombol */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.order-btn:hover {
+    background-color: #218838; /* Warna hijau lebih gelap saat hover */
+}
+
+.order-btn:focus {
+    outline: none; /* Menghilangkan outline saat tombol difokuskan */
+}
+
+
+Penjelasan:
+- *`background-color: #28a745`*: Memberikan warna hijau pada tombol.
+- *`color: white`*: Memberikan warna teks putih pada tombol.
+- *`padding: 10px 20px`*: Menambah ruang dalam tombol agar terlihat lebih besar dan mudah diklik.
+- *`cursor: pointer`*: Mengubah kursor menjadi tangan saat berada di atas tombol.
+- *`border-radius: 5px`*: Memberikan sudut yang tumpul pada tombol.
+- *`hover` dan `focus`*: Efek saat pengguna mengarahkan mouse ke tombol atau menekan tombol.
+
+3. *JavaScript - Menambahkan Fungsi Pemesanan (Opsional)*
+
+Jika Anda ingin memberikan interaksi lebih lanjut, seperti menampilkan notifikasi atau membuka pop-up setelah tombol *Order* diklik, Anda bisa menambahkan kode JavaScript sederhana.
+
+Contoh JavaScript untuk Menampilkan Pesan Setelah Tombol Order Diklik:
+
+html
+<script>
+    function orderNow(foodItem) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- Tombol "Lanjutkan Pembayaran": Tombol ini untuk melanjutkan ke proses pembayaran, seperti pengisian data kartu atau konfirmasi pembayaran (di halaman nyata, Anda akan menghubungkan ini dengan sistem pembayaran).
+
+Langkah 2: Menambahkan Tombol Order Now di Halaman Menu
+
+Di halaman utama (misalnya index.html), kita akan menambahkan tombol Order Now yang mengarahkan pengguna ke halaman pembayaran (payment.html).
+
+2. Tambahkan Tombol Order di Menu
+
+Buka file index.html dan pastikan tombol Order Now pada setiap item makanan mengarah ke halaman pembayaran. Anda bisa menambahkan atribut href pada tombol sehingga saat diklik, pengunjung diarahkan ke halaman pembayaran.
+
+
+<section id="menu">
+    <h2>Menu Makanan</h2>
+
+    <div class="menu-item">
+        <img src="https://via.placeholder.com/200" alt="Nasi Goreng" class="food-img">
+        <div class="food-details">
+            <h3>Nasi Goreng</h3>
+            <p>Harga: Rp 25.000</p>
+            <p>Deskripsi: Nasi goreng dengan bumbu spesial dan telur ceplok di atasnya.</p>
+            <!-- Tombol Order Now -->
+            <a href="payment.html?item=Nasi%20Goreng&price=25000">
+                <button class="order-btn">Order Now</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="menu-item">
+    <img src="https://via.placeholder.com/200" alt="Ayam Bakar" class="food-img">
+        <div class="food-details">
+            <h3>Ayam Bakar</h3>
+            <p>Harga: Rp 30.000</p>
+            <p>Deskripsi: Ayam bakar dengan sambal khas dan nasi putih.</p>
+            <!-- Tombol Order Now -->
+            <a href="payment.html?item=Ayam%20Bakar&price=30000">
+                <button class="order-btn">Order Now</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="https://via.placeholder.com/200" alt="Mi Goreng" class="food-img">
+        <div class="food-details">
+            <h3>Mi Goreng</h3>
+            <p>Harga: Rp 20.000</p>
+            <p>Deskripsi: Mi goreng dengan sayuran segar dan bumbu pedas.</p>
+            <!-- Tombol Order Now -->
+            <a href="payment.html?item=Mi%20Goreng&price=20000">
+                <button class="order-btn">Order Now</button>
+            </a>
+        </div>
+    </div>
+</section>
+```
+
+Penjelasan:
+- Setiap tombol Order Now di dalam menu akan mengarah ke halaman pembayaran (payment.html) dan menyertakan parameter URL berupa item yang dipesan dan harga. Contoh: payment.html?item=Nasi%20Goreng&price=25000.
+
+
+
+
+- Dengan cara ini, halaman pembayaran akan tahu item apa yang dipesan dan berapa harga makanan tersebut.
+
+Langkah 3: Menangani Data yang Dikirimkan ke Halaman Pembayaran
+
+Untuk menampilkan informasi yang dikirim melalui URL di halaman pembayaran, kita bisa menggunakan JavaScript untuk menangkap parameter di URL dan menampilkannya di halaman pembayaran.
+
+3. Menangkap Data di Halaman Pembayaran (JavaScript)
+
+Tambahkan script berikut di bagian bawah file payment.html untuk menangkap parameter URL dan menampilkan detail pesanan di halaman pembayaran:
+
+```html
+<script>
+    // Fungsi untuk mendapatkan parameter dari URL
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    // Menampilkan detail pesanan di halaman pembayaran
+    window.onload = function() {
+        const item = getQueryParam('item');
+        const price = getQueryParam('price');
+
+        if (item && price) {
+            document.getElementById('order-summary').innerHTML = `
+                <h2>Ringkasan Pesanan</h2>
+                <div class="order-item">
+                    <p>Menu: item</p>
+                    <p>Harga: Rp{price}</p>
+                </div>
+                <div class="total">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Untuk menambahkan kode di bagian Langkah 3 ke dalam halaman pembayaran (payment.html), Anda hanya perlu menyisipkan script JavaScript di bagian bawah file HTML setelah elemen HTML selesai. Hal ini bertujuan agar JavaScript dapat memproses data dan menampilkannya dengan benar setelah seluruh halaman dimuat.
+
+Berikut adalah langkah-langkah detail untuk menambahkan kode JavaScript yang menangkap parameter URL (seperti nama makanan dan harga) dan menampilkannya di halaman pembayaran.
+
+1. *Buka Halaman Pembayaran (payment.html)*
+
+Buka file payment.html yang sudah Anda buat sebelumnya.
+
+2. *Tambahkan Kode JavaScript di Bagian Bawah payment.html*
+
+Di dalam file payment.html, tambahkan kode berikut di bagian bawah sebelum tag </body> (sebelum penutupan body HTML).
+
+Berikut adalah tampilan lengkap dengan penambahan kode JavaScript:
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Halaman Pembayaran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Halaman Pembayaran</h1>
+    </header>
+
+    <section id="order-summary">
+        <h2>Ringkasan Pesanan</h2>
+        <div class="order-item">
+            <p>Menu: Nasi Goreng</p>
+            <p>Harga: Rp 25.000</p>
+        </div>
+        <div class="order-item">
+            <p>Menu: Ayam Bakar</p>
+            <p>Harga: Rp 30.000</p>
+        </div>
+        <div class="total">
+            <h3>Total: Rp 55.000</h3>
+        </div>
+    </section>
+
+    <section id="payment-method">
+        <h2>Pilih Metode Pembayaran</h2>
+        <form action="#" method="POST">
+            <label for="payment-method">Metode Pembayaran:</label>
+            <select id="payment-method" name="payment-method">
+                <option value="credit-card">Kartu Kredit/Debit</option>
+                <option value="bank-transfer">Transfer Bank</option>
+                <option value="gopay">GoPay</option>
+                <option value="ovo">OVO</option>
+            </select>
+            <br><br>
+            <button type="submit">Lanjutkan Pembayaran</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Website Makanan | Semua Hak Cipta Dilindungi</p>
+    </footer>
+
+</body>
+</html>

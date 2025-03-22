@@ -1,0 +1,209 @@
+#menu {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#menu h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.menu-item .food-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.menu-item .food-details {
+    max-width: 300px;
+    text-align: left;
+}
+
+.menu-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.menu-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+/* Ringkasan Pesanan */
+.order-summary {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.order-item p {
+    font-size: 1.1rem;
+}
+
+.total h3 {
+    font-size: 1.5rem;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Metode Pembayaran */
+.payment-method {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.payment-method label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.payment-method select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.payment-method button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+.payment-method button:hover {
+    background-color: #218838;
+}
+
+.payment-method button:active {
+    background-color: #1e7e34;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .order-summary,
+    .payment-method {
+        padding: 15px;
+    }
+
+    .payment-method button {
+        padding: 10px;
+    }
+}
+.qris-payment {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.qris-payment h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.qris-payment img {
+    width: 250px; /* Ukuran QR code, sesuaikan dengan gambar Anda */
+    margin-top: 15px;
+    border: 2px solid #28a745;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.qris-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.qris-link:hover {
+    background-color: #218838;
+}
+
+.qris-link:active {
+    background-color: #1e7e34;
+}

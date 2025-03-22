@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Website Makanan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            background-color: #444;
+            padding: 1em;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+        }
+        .food-item {
+            display: flex;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: rgb(243, 231, 231);
+        }
+        .food-item img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .food-item h3 {
+            margin: 0;
+        }
+        footer {
+            background-color: #d3c9c9;
+            color: rgb(238, 232, 232);
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .contact-section {
+            background-color: #f6c0c0;
+            padding:60px;
+            text-align: center;
+        }
+        .contact-section h2 {
+            margin-bottom: 20px;
+        }
+        .contact-section p {
+            font-size: 18px;
+        }
+        .contact-button {
+            background-color: #25d366; /* WhatsApp green */
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .contact-button:hover {
+            background-color: #128c7e;
+        }
+    
+        .Telegram-button {
+            background-color: #22aaff; /* Tele Blue */
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .contact-button:hover {
+            background-color: #22aaff;
+        }
+        
+        .order-btn {
+    background-color: #28a745; /* Warna hijau untuk tombol */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.order-btn:hover {
+    background-color: #218838; /* Warna hijau lebih gelap saat hover */
+}
+
+.order-btn:focus {
+    outline: none; /* Menghilangkan outline saat tombol difokuskan */
+      }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Selamat Datang di Website Makanan</h1>
+    </header>
+
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Menu</a>
+        <a href="#kontak">Kontak</a> <!-- Tombol Kontak mengarah ke bagian kontak -->
+        <a href="#telegram">Telegram</a> <!-- Tombol Tele mengarah ke bahagian Telegram -->
+    </nav>
+
+    <div class="container">
+        <h2>Menu Makanan</h2>
+
+        <div class="food-item">
+            <img src="https://img12.pixhost.to/images/1089/578536613_skyzopedia.jpg" alt="Nasi Goreng">
+            <div>
+                <h3>Nasi Goreng</h3>
+                <p>Harga: RM 7.00</p>
+                <p>Deskripsi: Nasi goreng dengan Telur Mata Diatasnya.</p>
+                  <!-- Tombol Order Now -->
+            <a href="payment.html?item=Nasi%20Goreng&price=7.00">
+                
+                <button class="order-btn">Order Now</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="food-item">
+        <img src="https://img12.pixhost.to/images/1090/578538924_skyzopedia.jpg" alt="Ayam Bakar">
+        <div>
+            <h3>Ayam Bakar</h3>
+            <p>Harga: RM 20.00</p>
+            <p>Deskripsi: Ayam Bakar Yang Sangat Sedap.</p>
+            <!-- Tombol Order Now -->
+            <a href="payment.html?item=Ayam%20Bakar&price=20.00">
+                
+                <button class="order-btn">Order Now</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="food-item">
+        <img src="https://img12.pixhost.to/images/1100/578700290_skyzopedia.jpg" alt="Ayam Bakar">
+        <div>
+            <h3>Ayam Goreng</h3>
+            <p>Harga: RM 3/PCS</p>
+            <p>Deskripsi: Ayam Goreng Yang Crispy Dan Lembut.</p>
+             <!-- Tombol Order Now -->
+            <a href="payment.html?item=Ayam%20Goreng&price=3.00">
+                
+                <button class="order-btn">Order Now</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="food-item">
+        <img src="https://img12.pixhost.to/images/1090/578540248_skyzopedia.jpg" alt="Ayam Bakar">
+        <div>
+            <h3>Sotong Celup Tepung</h3>
+            <p>Harga: RM 10.00</p>
+            <p>Deskripsi: Sotong Celup Tepung Yang Rangup.</p>
+             <!-- Tombol Order Now -->
+            <a href="payment.html?item=Sotong Celup%20Tepung&price=10.00">
+                
+                <button class="order-btn">Order Now</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="food-item">
+            <img src="https://img12.pixhost.to/images/1090/578538484_skyzopedia.jpg" alt="Mi Goreng">
+            <div>
+                <h3>Mi Goreng</h3>
+                <p>Harga: RM 5.00</p>
+                <p>Deskripsi: Mi goreng dengan sayuran segar dan bumbu pedas.</p>
+                  <!-- Tombol Order Now -->
+            <a href="payment.html?item=Mi%20Goreng&price=5.00">
+                
+                <button class="order-btn">Order Now</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="food-item">
+                <img src="https://img12.pixhost.to/images/1101/578709822_skyzopedia.jpg" alt="Ayam Bakar" class="food-img">
+                <div class="food-details">
+                    <h3>Bihun Sup</h3>
+                    <p>Harga: RM 5</p>
+                    <p>Deskripsi: Bihun Sup Dan Kuetiow.</p>
+                     <!-- Tombol Order Now -->
+            <a href="payment.html?item=Bihun%20Sup&price=5.00">
+                
+                <button class="order-btn">Order Now</button>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Bagian Kontak -->
+    <div id="kontak" class="contact-section">
+        <h2>Kontak Kami</h2>
+        <p>Jika Anda ingin memesan, Anda bisa langsung menghubungi kami melalui WhatsApp:</p>
+        <a href="https://wa.me/601156973637" class="contact-button" target="_blank">Hubungi via WhatsApp
+            
+        
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Website Makanan | Semua Hak Cipta Dilindungi</p>
+    </footer>
+    <!-- Bagian Tele -->
+    <div id="kontak" class="contact-section">
+        
+        
+        <h2>
+            
+            ATAU
+
+
+        </h2>
+
+
+
+        <h2>Kontak Kami</h2>
+        <p>Menggunakan Telegram:</p>
+        <a href="https://t.me/finixx11" class="Telegram-button" target="_blank">Hubungi via Telegram</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Website Makanan | Semua Hak Cipta Dilindungi</p>
+    </footer>
+
+
+</body>
+</html>
